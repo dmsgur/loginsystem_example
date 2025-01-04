@@ -318,7 +318,7 @@
       $(".logcont").remove()
       $(".urlcont").remove()
       $(".imgcontainer").css({position:"static",...protocss,maxWidth:"100%",maxHeight:"100%"})
-      curcontainer.find(".imgcontainer").css({zIndex: 111,position:"absolute",maxWidth: "91%",height:"72vh",maxHeight: "72%",left: "4vw",top:"5vw"}).prepend(`<p class='urlcont' style="text-align:right;margin-bottom:2rem;margin-left:2rem"><a style="color:blue" href="${curcontainer.attr('sourceurl')?curcontainer.attr('sourceurl'):''}">${curcontainer.attr('sourceurl')?'소스보기':''}</a><br></p>`).append(`<p class="logcont" style="background:white;padding:0.5vw;border:1px solid gray">${curcontainer.find(".elips_cont").text()}</p>`)
+      curcontainer.find(".imgcontainer").css({zIndex: 111,position:"absolute",maxWidth: "91%",height:"72vh",maxHeight: "72%",left: "4vw",top:"5vw"}).prepend(`<p class='urlcont' style="text-align:right;margin-bottom:2rem;margin-left:2rem"><a style="color:orange" href="${curcontainer.attr('sourceurl')?curcontainer.attr('sourceurl'):''}">${curcontainer.attr('sourceurl')?'소스보기':''}</a><br></p>`).append(`<p class="logcont" style="background:white;padding:0.5vw;border:1px solid gray">${curcontainer.find(".elips_cont").text()}</p>`)
       $("#img_closer").css("display")!="inline"&&$("#img_closer").css({display:"inline"})
       $(".arraw").css("display")=="none"&&$(".arraw").css("display","inline")
       $("#img_closer").on("click",function(){
