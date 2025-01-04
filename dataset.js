@@ -21,9 +21,9 @@ class DataSet{
 let d1 = new DataSet("개발환경구축")//메인 타이틀 //메뉴번호
 d1.set_content("개발목적을 작성합니다.")//서브 타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술1",sourceurl:"http://127.0.0.1"})//이미지타이틀
-d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1w_VpWt44pW84hxctJo4cHyxzmp0VpzQm",imglog:"이미지에 대한 간략한 설명 서술2",sourceurl:"http://127.0.0.1"})//이미지타이틀
+d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1w_VpWt44pW84hxctJo4cHyxzmp0VpzQm",imglog:"이미지에 대한 간략한 설명 서술2",sourceurl:""})//이미지타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1bx2inTLlp0sEEB3zWp4nL2OEvLm0tUj6",imglog:"이미지에 대한 간략한 설명 서술3",sourceurl:"http://127.0.0.1"})//이미지타이틀
-d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술4",sourceurl:"http://127.0.0.1"})//이미지타이틀
+d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술4",sourceurl:""})//이미지타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술5",sourceurl:"http://127.0.0.1"})//이미지타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술6",sourceurl:"http://127.0.0.1"})//이미지타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술7",sourceurl:"http://127.0.0.1"})//이미지타이틀
