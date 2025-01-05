@@ -6,9 +6,9 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="../menu.js"></script>
-  <script src="../dataset.js"></script>
-  <script src="../setting.js"></script>
+  <script src="menu.js"></script>
+  <script src="dataset.js"></script>
+  <script src="setting.js"></script>
   <style>
     * {
       margin: 0;
@@ -278,6 +278,7 @@
 </style>
 <script>
   function createImageUrl(thumbnail_id, w = 500, width, height,float_chk) {
+    thumbnail_id=thumbnail_id.replace(`https://drive.google.com/file/d/`,"").replace("/view?usp=drive_link","")
     return `<div class="imgcontainer" style="${float_chk?"clear:both;":"float:left;"}${width ? ("width:" + (float_chk?100:width) + "%;") : "width:100%;"} ${height ? ("height:" + height + "vh") : "height:100%"}"><img src="https://drive.google.com/thumbnail?id=${thumbnail_id}&sz=w${w}" ></div>`
   }
   function imagePlace(inx) {
