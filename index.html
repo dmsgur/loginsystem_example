@@ -278,7 +278,7 @@
 <script>
   function createImageUrl(thumbnail_id, w = 500, width, height,float_chk) {
     thumbnail_id=thumbnail_id.replace(`https://drive.google.com/file/d/`,"").replace("/view?usp=drive_link","")
-    return `<div class="imgcontainer" style="${float_chk?"clear:both;":"float:left;"}${width ? ("width:" + (float_chk?100:width) + "%;") : "width:100%;"} ${height ? ("height:" + height + "vh") : "height:100%"}"><img src="https://drive.google.com/thumbnail?id=${thumbnail_id}&sz=w${w}" ></div>`
+    return `<div class="imgcontainer" style="text-align:center;background:lightgray;${float_chk?"clear:both;":"float:left;"}${width ? ("width:" + (float_chk?100:width) + "%;") : "width:100%;"} ${height ? ("height:" + height + "vh") : "height:100%"}"><img src="https://drive.google.com/thumbnail?id=${thumbnail_id}&sz=w${w}" ></div>`
   }
   function imagePlace(inx) {
     createImageUrl($("#thum1"), "17KPamLcwRpk7yZVpjMqqaumfIBL-8R8k")
