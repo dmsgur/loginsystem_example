@@ -292,7 +292,7 @@
     
     let inHtml = ""
     for (let i = 0; i < data_sets[mix].sub_img[six].length; i++) {
-      inHtml += `<div style="float:left;margin-left:1vw;margin-bottom:5vw" class="detail_cont">`
+      inHtml += `<div style="float:left;margin-left:1vw;margin-bottom:5vw" class="detail_cont" sourceurl="${data_sets[mix].sub_img[six][i].sourceurl}">`
       inHtml += `<p style="background:lightgray;padding:0.2vw"> ${data_sets[mix].sub_img[six][i].imgtitle}</p>`
       inHtml += createImageUrl(data_sets[mix].sub_img[six][i].imgurl, 3000, image_wsize, image_hsize,true)
       inHtml += `<p class="elips_cont">${data_sets[mix].sub_img[six][i].imglog}</p></div>`
