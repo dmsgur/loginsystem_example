@@ -15,12 +15,13 @@ class DataSet{
 	set_fill(ufill){this.user_fill=ufill}
 	 
 }
+//https://drive.google.com/file/d/1P8hRJcBdjBv29RUFEWsILhXTT3klwBJX/view?usp=drive_link
 // 최대 스냅샷은 10개 까지 등록 가능합니다.
 // menu1. =============================================================
 // d1 은 한 화면 입니다. 첫화면에는 set_img( 0 ~ n) 의 첫번째가 출력되며, 첫번째 출력을 선택하면 set_img(0) 의 동일 번호이미지가 최종 출력됩니다.
 let d1 = new DataSet("개발환경구축")//메인 타이틀 //메뉴번호
-d1.set_content("개발목적을 작성합니다.")//서브 타이틀
-d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술1",sourceurl:"http://127.0.0.1"})//이미지타이틀
+d1.set_content("사용자의 로그인 기능을 구현하여 로그인 사용자와 비로그인 사용자에 제공 서비스를 구분한다.")//서브 타이틀
+d1.set_img(0,{imgtitle:"요구사항명세",imgurl:"1P8hRJcBdjBv29RUFEWsILhXTT3klwBJX",imglog:"사용자의 요구사항을 인터뷰, 설문지등의 방법으로 조사하여 분석할 수 있다.",sourceurl:"https://docs.google.com/document/d/1fYO-WllL1nq8-qJC6Aj8fTeQplv7hvQzxUfRQAgAamo/edit?usp=drive_link"})//이미지타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1w_VpWt44pW84hxctJo4cHyxzmp0VpzQm",imglog:"이미지에 대한 간략한 설명 서술2",sourceurl:""})//이미지타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1bx2inTLlp0sEEB3zWp4nL2OEvLm0tUj6",imglog:"이미지에 대한 간략한 설명 서술3",sourceurl:"http://127.0.0.1"})//이미지타이틀
 d1.set_img(0,{imgtitle:"이미지 타이틀",imgurl:"1S0rv5tVKoKnAqKRLrW7huVwCqFct3AnY",imglog:"이미지에 대한 간략한 설명 서술4",sourceurl:""})//이미지타이틀
