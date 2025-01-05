@@ -111,12 +111,7 @@
       }catch(e){
         menu_cur=0;
       }
-      console.log("미구현0")
-      if(menu_cur>=data_sets.length){
-        $("#container").html(`<div style="color:red;font-size:3vw;text-align:center"> 아직 구현 되지 않은 메뉴 입니다. !!!</div>`)
-        console.log("미구현")
-        return false;
-      }
+      
       for (let i = 0; i < menu_sets.length; i++) {
         let ele = $(`<p style="margin-top:1.2vw" ix=${i}><a class='menus' href="${menu_sets[i].url}"> ${menu_sets[i].mtitle} </a></p>`)
         let submenu = `<div ix=${i}>`
@@ -138,7 +133,12 @@
           $("#cover").css("display", "none")
         });
       })
-      
+      console.log("미구현0")
+      if(menu_cur>=data_sets.length){
+        $("#container").html(`<div style="color:red;font-size:3vw;text-align:center"> 아직 구현 되지 않은 메뉴 입니다. !!!</div>`)
+        console.log("미구현")
+        return false;
+      }
       let inHtml = ""
       inHtml += `
         <div id="maincontainer">`
