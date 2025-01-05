@@ -138,8 +138,6 @@
         <div id="maincontainer">`
           for(let i=0;i<data_sets[menu_cur].sub_content.length;i++){
             inHtml+=`<div style="float:left" class="content" mainnum=${menu_cur} subnum=${i}>`
-              console.log(data_sets[menu_cur]["sub_img"])
-              console.log(i)
             inHtml+=`<div class="top-cont">${createImageUrl(data_sets[menu_cur]["sub_img"][i][0].imgurl, 3000)}</div>`
             inHtml+=`<div class="bottom-cont">${data_sets[menu_cur]["sub_content"][i]}</div></div>`
         }
