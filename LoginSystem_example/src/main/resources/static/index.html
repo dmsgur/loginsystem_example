@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>로그인 시스템</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+	body{padding:1vw}
+	label{display:inline-block;width:13vw;margin-top:0.2vw}
+	#login_container{width:18vw}
+	#login_container div{float:left}
+	#login_container p{padding-top:1vw;clear:both;text-align:center}
+	h3{position:absolute;bottom:1vw}
+	button{height:2.7vw;padding:0.5vw}
+	a{text-decoration: none;margin-left:1vw}
+  </style>
+</head>
+<body>
+	<h1>로그인 시스템 포트폴리오</h1>
+	<div id="login_container">
+		<div id="loginfo">
+			<label>아 이 디 &nbsp;<input type="text" id="mid"/></label><br>
+			<label>패스워드 <input type="password" id="mpw"/></label>
+		</div>
+		<div id="signin">
+			<button>로그인</button>
+		</div>
+		<p><a href="signup.html"> 회원가입 </a> <a style="display:none" id="listview" href="#"> 회원리스트 </a></p>
+	</div>
+	<div id="listview"></div>
+	<div id="viewmember">
+		
+	</div>
+	<h3>[광주컴퓨터기술학원] 작성자 : 홍길동</h3>
+<script>
+	console.log("main update 6");
+	let mydata;
+	$("#signin button").click(async ()=>{
+		// 'Content-Type': 'application/x-www-form-urlencoded',
+		// const res = await fetch("url",{method:"post",headers:{"content-type":"application/json"},body:JSON.stringify(data)})
+		// const data = await res.json();
+		const jdata = {mid:$("#mid").val(),mpw:$("#mpw").val()}
+		const res = await fetch("/member/login",{method:"post",headers:{"content-type":"application/json"},body:JSON.stringify(jdata)})
+		mydata = await res.json();
+		console.log(mydata)
+		if(mydata.message=="로그인성공"){
+			$("#loginfo").html(`
+				${mydata.member.name}(${mydata.member.mid}) 님 환영합니다.
+			`)
+			$("#signin").html(` &nbsp;&nbsp;<a href="/member/logout"> 로그아웃 </a>`)
+			$("#listview").css("display","inline")
+		}
+	})
+	$("#listview").click(async (e)=>{
+		e.preventDefault();
+		const res = await fetch("/member/memList");
+		const data = await res.json();
+		if(data.message=="success"){
+			console.log(data.members)
+			$("#viewmember").html("<hr>"+data.members.map((item)=>JSON.stringify(item)+"<br>").join(""));
+		}
+	})
+</script>
+</body> 
+</html>

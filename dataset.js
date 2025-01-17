@@ -12,8 +12,7 @@ class DataSet{
 		if(!this.sub_img[num]){this.sub_img[num]=[]}
 		this.sub_img[num].push(obj)
 	}
-	set_fill(ufill){this.user_fill=ufill}
-	 
+	set_fill(ufill){this.user_fill=ufill}	 
 }
 //******************************* build describe ************************************************ 
 // 포트폴리오제시항목의 1. 

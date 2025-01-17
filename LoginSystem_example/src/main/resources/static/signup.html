@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>로그인 시스템</title>
+  <style>
+	h3{position:absolute;bottom:1vw}
+	label{display:inline-block;width:5rem;text-align:center;margin-top:0.5rem}
+	div{margin-top:1rem}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>로그인 시스템 포트폴리오</h1>
+	<form id="memform">
+		<fieldset>
+			<legend>회원가입</legend>
+			<div>
+				<label for="mid"> 아 이 디 </label><input id="mid" type="text" name="mid"/>
+			</div>
+			<div><label for="mpw">비밀번호</label><input id="mpw" type="password" name="mpw"/>
+			<label for="mpwc">확 인</label><input id="mpwc" type="password" />
+			</div>
+			<div>
+			<label for="mname">이 름</label><input id="mname" type="text" name="name"/>
+			<label for="mage">나 이</label><input id="mage" type="number" name="age"/>
+			<label for="maddr">주 소</label><input id="maddr" type="text" name="address"/>
+			</div>
+			<div>
+			성 별
+				<label for="mmale">남</label><input type="radio" id="mmale" name="gender" value="male">
+				<label for="mfemale">여</label><input type="radio" id="mfemale" name="gender" value="female">
+			</div>
+			<div>
+			취 미
+				<label for="mm">등 산</label><input type="checkbox" id="mm" value="m" name="hobby">
+				<label for="mf">낚 시</label><input type="checkbox" id="mf" value="f" name="hobby">
+				<label for="mb">볼 링</label id="mid"><input type="checkbox" id="mb" value="b" name="hobby">
+				<label for="mc">사이클</label><input type="checkbox" value="c" id="mc" name="hobby">
+			</div>
+			<div>
+			직 업 &nbsp;&nbsp;
+				<select name="job">
+					<option value="edu">교육계</option>
+					<option value="hos">의료계</option>
+					<option value="spo">스포츠계</option>
+					<option value="law">법조계</option>
+					<option value="gov">공무원</option>
+				</select>
+			</div>		
+		</fieldset>
+		<div>
+			<input type="submit" value="회원가입" style="width:6vw"/>
+			<input type="reset" value="다시입력" style="width:6vw"/>
+		</div>
+	</form>
+	<h3>[광주컴퓨터기술학원] 작성자 : 홍길동</h3>
+
+</body> 
+<script>
+	console.log("7")//갱신값
+	$("#memform").on("submit",async (e)=>{
+		e.preventDefault();
+		const payload = new FormData($("#memform")[0])
+		for (let key of payload.keys()) {
+			console.log(key, ":", payload.get(key));
+			if(!payload.get(key)||payload.get(key)==""){
+				payload.delete(key);	
+			}
+				
+		}
+		
+		console.log(payload);
+
+		const res = await fetch("/member/signup",{method:"post",body:payload})
+		const data = await res.json();
+		console.log(data.message)
+		if(data.message=="가입성공"){
+			alert("회원가입에 성공하였습니다. 로그인 페이지로 이동합니다.")
+			location.href="/";
+		}
+		
+		return false;
+	})
+</script>
+</html>
